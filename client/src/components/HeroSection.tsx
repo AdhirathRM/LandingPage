@@ -34,7 +34,7 @@ export const HeroSection = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: 'url(./public/ENSAMBLE.png)',
+          backgroundImage: 'url(/ENSAMBLE.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundAttachment: 'fixed',
