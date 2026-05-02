@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 // Import the image so Vite manages the path correctly for Vercel
-import heroBg from '../assets/oath.png';
+import heroBg from '../assets/ENSAMBLE.png';
 
 export const HeroSection = () => {
   const contentRef = useRef<HTMLDivElement>(null);
