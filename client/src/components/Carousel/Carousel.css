@@ -1,0 +1,107 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 215, 0, 0.2); 
+  border-radius: 20px;
+  background: rgba(8, 6, 18, 0.9); 
+  backdrop-filter: blur(20px);
+  height: 850px; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carousel-track {
+  display: flex;
+  height: calc(100% - 100px);
+  touch-action: none; /* Stops the browser from scrolling sideways[cite: 1] */
+}
+
+.carousel-item {
+  flex-shrink: 0; /* Keeps cards at full 1400px width[cite: 1] */
+  height: 100%;
+  background-color: #0d0a1e; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.carousel-item-title-large {
+  font-size: 85px; 
+  font-weight: 900;
+  color: #FFD700;
+  text-transform: uppercase;
+  font-family: 'Cinzel', serif;
+  margin-bottom: 12px;
+  text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.sprite-display-box-large {
+  width: 350px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sprite-animate-horizontal {
+  width: 68px;
+  height: 68px;
+  background-size: 272px 68px; 
+  image-rendering: pixelated;
+  transform: scale(4.5); 
+  animation: sprite-walk-cycle 1s steps(4) infinite;
+}
+
+@keyframes sprite-walk-cycle {
+  from { background-position: 0 0; }
+  to { background-position: -272px 0; }
+}
+
+.carousel-icon-container-large {
+  display: flex;
+  height: 72px;
+  width: 72px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.carousel-icon-svg {
+  height: 36px;
+  width: 36px;
+  filter: drop-shadow(0 0 15px currentColor);
+}
+
+.carousel-indicators-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.carousel-indicators {
+  display: flex;
+  gap: 20px;
+  padding: 14px 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 40px;
+}
+
+.carousel-indicator {
+  height: 5px;
+  border-radius: 2px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.carousel-indicator.active {
+  background-color: #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
